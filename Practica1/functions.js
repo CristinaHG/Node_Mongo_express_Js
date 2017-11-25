@@ -45,11 +45,16 @@ agent.sayhello()
 // object constructor
 
 function Fruit(name) {
+
     this.getName=function () {
         return name
     }
     this.setName=function (value) {
         name=value
+    }
+
+    return{
+        name:this.name
     }
 }
 
