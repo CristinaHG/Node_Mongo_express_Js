@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <%= paragraph %>
+    <%- paragraph %>
+    <% if (condition.state){ %>
+    <p> <%= condition.second %> is even </p>
+    <% }else { %>
+    <p> <%= condition.second %> is odd </p>
+    <% } %>
+
+    <h3> Users list </h3>
+    <% users.forEach(function(user){ %>
+    <p> <%=user.name%> </p>
+    <% })%>
+
+  </body>
+</html>
