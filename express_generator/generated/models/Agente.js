@@ -8,5 +8,16 @@ var agentScheme=monggose.Schema({
     }
 )
 
+agentScheme.statics.list=function (filter,limit,skip,fields,sort,cb) {
+    var query=Agent.find(filter)
+    query.limit(limit)
+    query.skip(skip)
+    query.select(fields)
+    query.sort(sort)
+    query.exec(cb)
+
+}
+
+
 //model creation
-monggose.model('Agente',agentScheme)
+var Agent=monggose.model('Agente',agentScheme)
